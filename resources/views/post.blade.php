@@ -1,0 +1,14 @@
+@switch($id)
+    @case(1)
+    @include('post1')
+    @breakswitch
+    @case(2)
+    @include('post2')
+    @breakswitch
+    @case(3)
+    @include('post3')
+    @breakswitch
+    @case(4)
+    @include('post4')
+    @breakswitch
+@endswitch
