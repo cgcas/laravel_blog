@@ -12,7 +12,7 @@ class posteando extends Controller
         $posts = Post::all();
 
         foreach ($posts as $post) {
-            if ($post['id']== $id){
+            if ($post->id== $id){
                 return view('post')->with('post', $post);
             }
         }
