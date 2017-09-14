@@ -9,13 +9,7 @@ class posteando extends Controller
 {
     public function verPost($id){
 
-        $posts = Post::all();
-
-        foreach ($posts as $post) {
-            if ($post->id== $id){
-                return view('post')->with('post', $post);
-            }
-        }
-
+        $post = Post::findorfail($id);
+        return view('post')->with('post', $post);
     }
 }
