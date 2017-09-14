@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('inicio');
+Route::get('/', 'home@verHome')->name('inicio');
 
 Route::get('/post/{id}', 'post@verPost')->name('post');
 
