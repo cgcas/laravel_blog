@@ -15,3 +15,5 @@ Route::get('/', 'home@verHome')->name('inicio');
 
 Route::get('/post/{id}', 'posteando@verPost')->name('post');
 
+Route::get('/buscar', 'buscar_controller@buscar')->name('buscar');
+

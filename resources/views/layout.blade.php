@@ -48,6 +48,13 @@
             <li class="nav-item">
               <a class="nav-link" href="{{route("inicio")}}">Contact</a>
             </li>
+            <li class="nav-item">
+              <form action="{{route("buscar")}}" method="get">
+                <label for="buscar" class="nav-link" style="color: white;">Buscar: </label>
+                <input type="text" name="buscar" id="buscar" />
+                <input type="submit" name="enviar" id="enviar" class="nav-link" />
+              </form>
+            </li>
           </ul>
         </div>
       </div>

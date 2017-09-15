@@ -38,7 +38,7 @@
           <div class="post-preview">
             <a href="post/2">
               <h2 class="post-title">
-                I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
+                El color del dinero
               </h2>
             </a>
             <p class="post-meta">Posted by
