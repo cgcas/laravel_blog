@@ -11,7 +11,7 @@ class buscar_controller extends Controller
 
         $enviar = $request->input("enviar");
 
-        if($enviar != "")){
+        if($enviar != ""){
             $cadena = $request->input("buscar");
             $num_res = Post::where('titulo','like',"%$cadena%")->orwhere('contenido','like',"%$cadena%")->count();
             if ($num_res == 0){
