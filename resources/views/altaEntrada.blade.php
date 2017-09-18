@@ -17,22 +17,41 @@
     </div>
   </header>
 
-  <div style="text-align: center">
   <form action="{{ route("nuevaEntrada")}}" method="post">
       {{ csrf_field() }}
-      <label for="titulo">Titulo: </label>
-      <input type="text" name="titulo" id="titulo" />
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="titulo">Titulo:</label>
+          <div class="col-md-4">
+              <input id="titulo" name="titulo" class="form-control input-md" type="text">
+          </div>
+      </div>
       <br />
-      <label for="subtitulo">Subtitulo: </label>
-      <input type="text" name="subtitulo" id="subtitulo" />
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="subtitulo">Subtitulo:</label>
+          <div class="col-md-4">
+              <input id="subtitulo" name="subtitulo" class="form-control input-md" type="text">
+          </div>
+      </div>
       <br />
-      <label for="usuario">Usuario: </label>
-      <input type="text" name="usuario" id="usuario" />
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="usuario">Usuario:</label>
+          <div class="col-md-4">
+              <input id="usuario" name="usuario" class="form-control input-md" type="text">
+          </div>
+      </div>
       <br />
-      <label for="contenido">Contenido del Post: </label>
-      <textarea name="contenido" id="contenido"></textarea>
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="contenido">Contenido:</label>
+          <div class="col-md-4">
+              <textarea class="form-control" id="contenido" name="contenido"></textarea>
+          </div>
+      </div>
       <br />
-      <input type="submit" name="enviar" id="enviar" value="Alta" />
+      <div class="form-group">
+          <div class="col-md-4">
+              <button id="enviar" name="enviar" class="btn btn-primary">Alta</button>
+          </div>
+      </div>
   </form>
-  </div>
+
 @stop
