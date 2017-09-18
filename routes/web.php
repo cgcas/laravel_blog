@@ -17,3 +17,8 @@ Route::get('/post/{id}', 'posteando@verPost')->name('post');
 
 Route::post('/buscar', 'buscar_controller@buscar')->name('buscar');
 
+Route::match(['get', 'post'], '/nuevaEntrada', 'nuevaEntradaController@alta')->name('nuevaEntrada');
+
+Route::match(['get', 'post'], '/editar/{id}', 'editarController@editar')->name('editar');
+
+Route::get('/borrar/{id}','borrarController@borrar')->name('borrar');

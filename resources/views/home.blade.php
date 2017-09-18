@@ -34,7 +34,10 @@
               </a>
               <p class="post-meta">Posted by
                 {{ $entrada->usuario }}
-               on {{ $entrada->fecha }}</p>
+               on {{ $entrada->fecha }}
+               <a href="editar/{{ $entrada->id }}">Editar</a>
+               <a href="borrar/{{ $entrada->id }}">Borrar</a>
+              </p>
             </div>
             <hr>
           @endforeach

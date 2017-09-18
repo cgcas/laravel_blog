@@ -43,7 +43,7 @@
               <a class="nav-link" href="{{route("inicio")}}">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route("inicio")}}">Sample Post</a>
+              <a class="nav-link" href="{{route("nuevaEntrada")}}">Alta Post</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{route("inicio")}}">Contact</a>

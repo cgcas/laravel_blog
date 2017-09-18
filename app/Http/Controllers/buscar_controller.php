@@ -14,7 +14,7 @@ class buscar_controller extends Controller
         if($enviar != ""){
             $cadena = $request->input("buscar");
             $num_res = Post::where('titulo','like',"%$cadena%")->orwhere('contenido','like',"%$cadena%")->count();
-            if ($num_res == 0){
+                if ($num_res == 0){
                 return view('busqueda')->with('sincoincidencias', 'sincoincidencias');
             }else {
                 $resultado = Post::where('titulo', 'like', "%$cadena%")->orwhere('contenido', 'like', "%$cadena%")->get();
