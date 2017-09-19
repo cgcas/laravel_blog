@@ -28,7 +28,8 @@
         <div class="col-lg-8 col-md-10 mx-auto">
 
            {!!  $post->contenido !!}
-
+          <hr />
+            <p>Entrada realizada por </p>
         </div>
       </div>
     </div>

@@ -10,6 +10,8 @@ class posteando extends Controller
     public function verPost($id){
 
         $post = Post::findorfail($id);
-        return view('post')->with('post', $post);
+        $usuario = Post::find($id)->User;
+
+        return view('post',['post' => $post,'usuario' => $usuario]);
     }
 }
