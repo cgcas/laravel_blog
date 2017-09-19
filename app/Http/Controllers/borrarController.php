@@ -11,6 +11,6 @@ class borrarController extends Controller
 
         $post = Post::findorfail($id);
         $post->delete();
-        return view('borrado');
+        return redirect()->route('inicio');
     }
 }

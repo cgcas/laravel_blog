@@ -18,12 +18,12 @@ class editarController extends Controller
             $entrada = Post::findorfail($id);
             $entrada->titulo = $titulo;
             $entrada->subtitulo = $subtitulo;
-            $entrada->usuario = $usuario;
+            $entrada->idUsuario = $usuario;
             $entrada->fecha = $fecha;
             $entrada->contenido = $contenido;
             $entrada->save();
 
-            return view('editado');
+            return redirect()->route('inicio');
         }else
         {
             $post = Post::findorfail($id);

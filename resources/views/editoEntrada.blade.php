@@ -36,7 +36,7 @@
       <div class="form-group">
           <label class="col-md-4 control-label" for="usuario">Usuario:</label>
           <div class="col-md-4">
-              <input id="usuario" name="usuario" class="form-control input-md" type="text"  value="{{ $post->usuario }}" />
+              <input id="usuario" name="usuario" class="form-control input-md" type="text"  value="{{ $post->idUsuario }}" />
           </div>
       </div>
       <br />

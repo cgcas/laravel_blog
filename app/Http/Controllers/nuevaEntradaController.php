@@ -18,12 +18,12 @@ class nuevaEntradaController extends Controller
             $entrada = new Post;
             $entrada->titulo = $titulo;
             $entrada->subtitulo = $subtitulo;
-            $entrada->usuario = $usuario;
+            $entrada->idUsuario = $usuario;
             $entrada->fecha = $fecha;
             $entrada->contenido = $contenido;
             $entrada->save();
 
-            return view('entro');
+            return redirect()->route('inicio');
         }else
         {
             return view('altaEntrada');
