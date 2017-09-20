@@ -33,7 +33,7 @@
                </h3>
               </a>
               <p class="post-meta">Posted by
-                {{ $entrada->idUsuario }}
+                {{ $entrada->user->nombre }}
                on {{ $entrada->fecha }}
                <a href="editar/{{ $entrada->id }}">Editar</a>
                <a href="borrar/{{ $entrada->id }}">Borrar</a>

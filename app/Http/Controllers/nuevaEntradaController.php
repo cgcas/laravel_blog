@@ -25,11 +25,6 @@ class nuevaEntradaController extends Controller
             $entrada->save();
 
             $id = $entrada->id;
-            if (!$id)
-            {
-                echo "ERROR post";
-                exit;
-            }
 
             $usuarcillo = new User;
             $usuarcillo->nombre = $usuario;
@@ -37,11 +32,6 @@ class nuevaEntradaController extends Controller
             $usuarcillo->save();
 
             $usuario_id = $usuarcillo->id;
-            if (!$usuario_id)
-            {
-                echo "ERROR usuario";
-                exit;
-            }
 
             $entrada = Post::findOrFail($id);
             $entrada->usuario_id = $usuario_id;
