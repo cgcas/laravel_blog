@@ -29,7 +29,7 @@
 
            {!!  $post->contenido !!}
           <hr />
-            <p>Entrada realizada por </p>
+            <p>Entrada realizada por {{$usuario->nombre}} </p>
         </div>
       </div>
     </div>

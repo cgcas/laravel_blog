@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\post;
+use App\Model\user;
 
 class nuevaEntradaController extends Controller
 {
@@ -18,10 +19,34 @@ class nuevaEntradaController extends Controller
             $entrada = new Post;
             $entrada->titulo = $titulo;
             $entrada->subtitulo = $subtitulo;
-            $entrada->idUsuario = $usuario;
             $entrada->fecha = $fecha;
             $entrada->contenido = $contenido;
+            $entrada->usuario_id = 0;
             $entrada->save();
+
+            $id = $entrada->id;
+            if (!$id)
+            {
+                echo "ERROR post";
+                exit;
+            }
+
+            $usuarcillo = new User;
+            $usuarcillo->nombre = $usuario;
+            $usuarcillo->post_id = $id;
+            $usuarcillo->save();
+
+            $usuario_id = $usuarcillo->id;
+            if (!$usuario_id)
+            {
+                echo "ERROR usuario";
+                exit;
+            }
+
+            $entrada = Post::findOrFail($id);
+            $entrada->usuario_id = $usuario_id;
+            $entrada->save();
+
 
             return redirect()->route('inicio');
         }else
