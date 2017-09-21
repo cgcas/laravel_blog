@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\post;
+use App\Model\Post;
 
 class buscar_controller extends Controller
 {

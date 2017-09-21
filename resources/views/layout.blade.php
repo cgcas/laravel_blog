@@ -46,7 +46,7 @@
               <a class="nav-link" href="{{route("nuevaEntrada")}}">Alta Post</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route("inicio")}}">Contact</a>
+              <a class="nav-link" href="{{route("escritores")}}">Escritores</a>
             </li>
             <li class="nav-item">
               <form action="{{route("buscar")}}" method="post">

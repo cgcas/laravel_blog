@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\post;
+use App\Model\Post;
+use App\Model\User;
 
 class editarController extends Controller
 {
@@ -15,10 +16,10 @@ class editarController extends Controller
             $usuario = $request->input("usuario");
             $fecha = date('Y-m-d');
             $contenido = $request->input("contenido");
-            $entrada = Post::findorfail($id);
+            $entrada = Post::findOrFail($id);
             $entrada->titulo = $titulo;
             $entrada->subtitulo = $subtitulo;
-            $entrada->idUsuario = $usuario;
+            $entrada->user->nombre = $usuario;
             $entrada->fecha = $fecha;
             $entrada->contenido = $contenido;
             $entrada->save();
@@ -26,7 +27,7 @@ class editarController extends Controller
             return redirect()->route('inicio');
         }else
         {
-            $post = Post::findorfail($id);
+            $post = Post::findOrFail($id);
             return view('editoEntrada')->with('post',$post);
         }
     }

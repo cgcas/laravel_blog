@@ -22,3 +22,5 @@ Route::match(['get', 'post'], '/nuevaEntrada', 'nuevaEntradaController@alta')->n
 Route::match(['get', 'post'], '/editar/{id}', 'editarController@editar')->name('editar');
 
 Route::get('/borrar/{id}','borrarController@borrar')->name('borrar');
+
+Route::get('/escritores', 'BlogController@listarEscritores')->name('escritores');
