@@ -11,6 +11,6 @@ class User extends Model
     public $timestamps = false;
     public function post()
     {
-        return $this->hasMany('App\Model\Post','post_id');
+        return $this->hasMany('App\Model\Post','usuario_id');
     }
 }

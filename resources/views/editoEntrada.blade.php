@@ -34,13 +34,6 @@
       </div>
       <br />
       <div class="form-group">
-          <label class="col-md-4 control-label" for="usuario">Usuario:</label>
-          <div class="col-md-4">
-              <input id="usuario" name="usuario" class="form-control input-md" type="text"  value="{{ $post->user->nombre }}" />
-          </div>
-      </div>
-      <br />
-      <div class="form-group">
           <label class="col-md-4 control-label" for="contenido">Contenido:</label>
           <div class="col-md-4">
               <textarea class="form-control" id="contenido" name="contenido">{{ $post->contenido }}</textarea>

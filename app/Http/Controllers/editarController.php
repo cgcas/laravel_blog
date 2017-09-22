@@ -13,13 +13,11 @@ class editarController extends Controller
         if ($request->isMethod('post')) {
             $titulo = $request->input("titulo");
             $subtitulo = $request->input("subtitulo");
-            $usuario = $request->input("usuario");
             $fecha = date('Y-m-d');
             $contenido = $request->input("contenido");
             $entrada = Post::findOrFail($id);
             $entrada->titulo = $titulo;
             $entrada->subtitulo = $subtitulo;
-            $entrada->user->nombre = $usuario;
             $entrada->fecha = $fecha;
             $entrada->contenido = $contenido;
             $entrada->save();

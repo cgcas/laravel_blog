@@ -24,3 +24,5 @@ Route::match(['get', 'post'], '/editar/{id}', 'editarController@editar')->name('
 Route::get('/borrar/{id}','borrarController@borrar')->name('borrar');
 
 Route::get('/escritores', 'BlogController@listarEscritores')->name('escritores');
+
+Route::get('/escritor/{id}','BlogController@listarEntradasEscritor')->name('escritor');

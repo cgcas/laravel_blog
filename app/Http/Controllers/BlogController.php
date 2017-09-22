@@ -14,4 +14,15 @@ class BlogController extends Controller
 
             return view('escritores')->with('escritores',$escritores);
     }
+
+    public function listarEntradasEscritor($id){
+        $entradas = User::find($id)->Post;
+
+        if(!$entradas)
+        {
+            abort(404);
+        }
+
+        return view('escritor',['entradas'=>$entradas]);
+    }
 }

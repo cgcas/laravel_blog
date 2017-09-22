@@ -24,11 +24,8 @@ class nuevaEntradaController extends Controller
             $entrada->usuario_id = 0;
             $entrada->save();
 
-            $id = $entrada->id;
-
             $usuarcillo = new User;
             $usuarcillo->nombre = $usuario;
-            $usuarcillo->post_id = $id;
             $usuarcillo->save();
 
             $usuario_id = $usuarcillo->id;

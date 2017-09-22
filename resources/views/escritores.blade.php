@@ -24,7 +24,7 @@
 
           @foreach($escritores as $escritor)
             <div class="post-preview">
-             <a href="personal/{{ $escritor->id }}">
+             <a href="escritor/{{ $escritor->id }}">
                <h2 class="post-title">
                   {{ $escritor->nombre }}
                 </h2>

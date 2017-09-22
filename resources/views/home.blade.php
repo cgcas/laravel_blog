@@ -17,34 +17,38 @@
       </div>
     </header>
 
+    @yield('busqueda')
+
     <!-- Main Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+    @if(isset($entradas))
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
 
-          @foreach($entradas as $entrada)
-            <div class="post-preview">
-             <a href="post/{{ $entrada->id }}">
-               <h2 class="post-title">
-                  {{ $entrada->titulo }}
-                </h2>
-               <h3 class="post-subtitle">
-                 {{ $entrada->subtitulo }}
-               </h3>
-              </a>
-              <p class="post-meta">Posted by
-                {{ $entrada->user->nombre }}
-               on {{ $entrada->fecha }}
-               <a href="editar/{{ $entrada->id }}">Editar</a>
-               <a href="borrar/{{ $entrada->id }}">Borrar</a>
-              </p>
+              @foreach($entradas as $entrada)
+                <div class="post-preview">
+                 <a href="post/{{ $entrada->id }}">
+                   <h2 class="post-title">
+                      {{ $entrada->titulo }}
+                    </h2>
+                   <h3 class="post-subtitle">
+                     {{ $entrada->subtitulo }}
+                   </h3>
+                  </a>
+                  <p class="post-meta">Posted by
+                    {{ $entrada->user->nombre }}
+                   on {{ $entrada->fecha }}
+                   <a href="editar/{{ $entrada->id }}">Editar</a>
+                   <a href="borrar/{{ $entrada->id }}">Borrar</a>
+                  </p>
+                </div>
+                <hr>
+              @endforeach
+
             </div>
-            <hr>
-          @endforeach
-
+          </div>
         </div>
-      </div>
-    </div>
+    @endif
 
     <hr>
 
