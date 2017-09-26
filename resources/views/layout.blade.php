@@ -12,6 +12,7 @@
     <title>Clean Blog - Start Bootstrap Theme</title>
 
     <!-- Bootstrap core CSS -->
+
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
@@ -21,6 +22,8 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/clean-blog.min.css')}}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   </head>
 
@@ -49,11 +52,12 @@
               <a class="nav-link" href="{{route("escritores")}}">Escritores</a>
             </li>
             <li class="nav-item">
-              <form action="{{route("buscar")}}" method="post">
-                {{ csrf_field() }}
-                <label for="buscar" class="nav-link" style="color: white;">Buscar: </label>
+              <a class="nav-link" href="{{route("login")}}">Login</a>
+            </li>
+            <li class="nav-item">
+              <form action="{{route("buscar")}}" method="get">
                 <input type="text" name="buscar" id="buscar" />
-                <input type="submit" name="enviar" id="enviar" class="nav-link" />
+                <input type="submit" name="enviar" id="enviar" class="nav-link" value="Buscar"/>
               </form>
             </li>
           </ul>

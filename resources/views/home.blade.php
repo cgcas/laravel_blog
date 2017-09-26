@@ -44,7 +44,7 @@
                 </div>
                 <hr>
               @endforeach
-
+              {{ $entradas->links() }}
             </div>
           </div>
         </div>
