@@ -10,6 +10,6 @@ class idiomaController extends Controller
     {
         App::setLocale($locale);
 
-        return redirect()->route('inicio');
+        return view('nuevoIdioma',['idioma'=>$locale]);
     }
 }

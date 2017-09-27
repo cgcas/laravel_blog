@@ -52,10 +52,10 @@
               <a class="nav-link" href="{{route("escritores")}}">@lang('messages.escritores')</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="idioma/es">ESPAÑOL</a>
+              <a class="nav-link" href="{{route("idioma",['locale'=>'es'])}}">ESPAÑOL</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="idioma/en">INGLES</a>
+              <a class="nav-link" href="{{route("idioma",['locale'=>'en'])}}">INGLES</a>
             </li>
             <!--<li class="nav-item">
               <a class="nav-link" href="{{route("login")}}">@lang('messages.login')</a>
