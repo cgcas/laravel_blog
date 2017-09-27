@@ -29,10 +29,10 @@
 
     <body>
 
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="{{route("inicio")}}">Start Bootstrap</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -40,24 +40,31 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{{route("inicio")}}">Home</a>
+              <a class="nav-link" href="{{route("inicio")}}">{{ __('messages.inicio')}}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route("inicio")}}">About</a>
+              <a class="nav-link" href="">@lang('messages.acerca')</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route("nuevaEntrada")}}">Alta Post</a>
+              <a class="nav-link" href="{{route("nuevaEntrada")}}">@lang('messages.altapost')</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route("escritores")}}">Escritores</a>
+              <a class="nav-link" href="{{route("escritores")}}">@lang('messages.escritores')</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route("login")}}">Login</a>
+              <a class="nav-link" href="idioma/es">ESPAÑOL</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="idioma/en">INGLES</a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link" href="{{route("login")}}">@lang('messages.login')</a>
+            </li>-->
             <li class="nav-item">
               <form action="{{route("buscar")}}" method="get">
-                <input type="text" name="buscar" id="buscar" />
-                <input type="submit" name="enviar" id="enviar" class="nav-link" value="Buscar"/>
+                <input type="text" name="cadena_titulo" id="buscar" placeholder="Titulo.." style="width: 120px;" />
+                <input type="text" name="cadena_contenido" id="buscar" placeholder="Contenido..." style="width: 120px;" />
+                <input type="submit" name="enviar" id="enviar" class="nav-link" value="{{ __('messages.buscar') }}" />
               </form>
             </li>
           </ul>
@@ -74,7 +81,7 @@
             <div class="col-lg-8 col-md-10 mx-auto">
               <ul class="list-inline text-center">
                 <li class="list-inline-item">
-                  <a href="{{route("inicio")}}">
+                  <a href="">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>

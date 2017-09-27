@@ -44,7 +44,11 @@
                 </div>
                 <hr>
               @endforeach
-              {{ $entradas->links() }}
+                @if(isset($cadena_titulo))
+                    {{ $entradas->appends(['cadena_titulo' => $cadena_titulo,'cadena_contenido' => $cadena_contenido ])->links() }}
+                @else
+                    {{ $entradas->links() }}
+                @endif
             </div>
           </div>
         </div>

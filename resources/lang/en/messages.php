@@ -3,11 +3,11 @@
 return [
 
 
-    'Inicio' => 'Home',
-    'Acerca' => 'About',
-    'Altapost' => 'New Post',
-    'Escritores' => 'Writers',
-    'Login' => 'Login',
-    'Buscar' => 'Search'
+    'inicio' => 'Home',
+    'acerca' => 'About',
+    'altapost' => 'New Post',
+    'escritores' => 'Writers',
+    'login' => 'Login',
+    'buscar' => 'Search'
 
 ];

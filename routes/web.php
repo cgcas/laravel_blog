@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/{locale}', 'home@verHome')->name('inicio');
+Route::get('/', 'home@verHome')->name('inicio');
+
+Route::get('/idioma/{locale}','idiomaController@cambioIdioma')->name('idioma');
 
 Route::get('/post/{id}', 'posteando@verPost')->name('post');
 

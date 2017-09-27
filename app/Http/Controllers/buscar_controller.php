@@ -10,13 +10,16 @@ class buscar_controller extends Controller
     public function buscar(Request $request)
     {
 
-        $cadena = $request->input("buscar");
-        $num_res = Post::where('titulo', 'like', "%$cadena%")->orWhere('contenido', 'like', "%$cadena%")->count();
+        $cadena_titulo = $request->input("cadena_titulo");
+        $cadena_contenido = $request->input("cadena_contenido");
+
+
+        $num_res = Post::where('titulo', 'like', "%$cadena_titulo%")->orWhere('contenido', 'like', "%$cadena_contenido%")->count();
         if ($num_res == 0) {
             return view('busqueda')->with('sincoincidencias', 'sincoincidencias');
         } else {
-            $resultado = Post::where('titulo', 'like', "%$cadena%")->orWhere('contenido', 'like', "%$cadena%")->paginate(2);
-            return view('busqueda', ['entradas' => $resultado, 'numeroEntradas' => $num_res]);
+            $resultado = Post::where('titulo', 'like', "%$cadena_titulo%")->orWhere('contenido', 'like', "%$cadena_contenido%")->paginate(1);
+            return view('busqueda', ['entradas' => $resultado, 'numeroEntradas' => $num_res,'cadena_titulo' => $cadena_titulo,'cadena_contenido' => $cadena_contenido]);
         }
     }
 }

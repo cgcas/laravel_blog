@@ -16,5 +16,7 @@
 
   @else
     <h1>Se han encontrado un número de {{ $numeroEntradas }} entradas:</h1>
+      {{$cadena_titulo}}
   @endif
+
 @stop
