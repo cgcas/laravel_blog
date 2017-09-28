@@ -19,6 +19,8 @@ Route::get('/post/{id}', 'posteando@verPost')->name('post');
 
 Route::get('/buscar', 'buscar_controller@buscar')->name('buscar');
 
+Route::match(['get', 'post'],'/nuevoUsuario', 'registroController@registrar')->name('nuevoUsuario');
+
 Route::match(['get', 'post'], '/nuevaEntrada', 'nuevaEntradaController@alta')->name('nuevaEntrada');
 
 Route::match(['get', 'post'], '/editar/{id}', 'editarController@editar')->name('editar');

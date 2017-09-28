@@ -51,7 +51,7 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/borrar');
 
-        $response->assertRedirect('/');
+        $response->assertRedirect('/borrar');
     }
 
 }

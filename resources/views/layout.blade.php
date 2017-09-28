@@ -52,6 +52,9 @@
               <a class="nav-link" href="{{route("escritores")}}">@lang('messages.escritores')</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="{{route("nuevoUsuario")}}">@lang('messages.nuevousuario')</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="{{route("idioma",['locale'=>'es'])}}">ESPAÑOL</a>
             </li>
             <li class="nav-item">
